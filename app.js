@@ -3,10 +3,16 @@ require('dotenv').config()
 const express = require('express')
 const app = express()
 const connectDB = require('./db/connect')
+const authRouter = require('./routers/auth')
+const jobsRouter = require('./routers/jobs')
 
 app.get('/', (req, res)=>{
     res.send('Welcome to Jobs API page')
 })
+
+
+app.use('/api/v1', authRouter)
+app.use('/api/v1', jobsRouter)
 
 const port = 4000 || process.env.PORT
 
