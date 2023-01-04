@@ -5,6 +5,8 @@ const app = express()
 const connectDB = require('./db/connect')
 const authRouter = require('./routers/auth')
 const jobsRouter = require('./routers/jobs')
+const errorHandlerMiddleware = require('./middlewares/errorHandlerMiddleware')
+const notFound = require('./middlewares/notFound')
 
 app.get('/', (req, res)=>{
     res.send('Welcome to Jobs API page')
@@ -13,6 +15,9 @@ app.get('/', (req, res)=>{
 
 app.use('/api/v1', authRouter)
 app.use('/api/v1', jobsRouter)
+
+app.use(errorHandlerMiddleware)
+app.use(notFound)
 
 const port = 4000 || process.env.PORT
 
