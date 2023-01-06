@@ -1,7 +1,7 @@
-const register = (req, res)=>{
+const register = async (req, res)=>{
     res.send('register route')
 }
-const login = (req, res)=>{
+const login = async (req, res)=>{
     res.send('login route')
 }
 

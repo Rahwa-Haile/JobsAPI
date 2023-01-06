@@ -1,11 +1,11 @@
+const getAllJobs = (req, res)=>{
+    res.send('get jobs')
+}
 const createJob = (req, res)=>{
     res.send('create a job')
 }
 const getJob = (req, res)=>{
     res.send('get a job')
-}
-const getJobs = (req, res)=>{
-    res.send('get jobs')
 }
 const updateJob = (req, res)=>{
     res.send('update a job')
@@ -18,7 +18,7 @@ const deleteJob = (req, res)=>{
 module.exports = {
     createJob,
     getJob,
-    getJobs,
+    getAllJobs,
     updateJob,
     deleteJob
 }

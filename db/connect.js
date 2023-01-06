@@ -6,4 +6,4 @@ const connectDB = async (url)=>{
     console.log('connected to db')
 }
 
-module.exports = connectDB
+module.exports = connectDB 
