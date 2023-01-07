@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const UserSchema = mongoose.Schema({
+const UserSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, 'Please provide your name'],
@@ -17,7 +17,7 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: [true, 'Please provide your password'],
         minlength: 3,
-        maxlength: 50
+       
     }
 })
 
