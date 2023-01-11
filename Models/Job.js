@@ -21,4 +21,6 @@ const JobSchema = new mongoose.Schema({
         ref: 'User',
         required: [true, 'please provide a user']
     },
-}, {timestamp: true})
+}, {timestamps: true})
+
+module.exports = mongoose.model('Job', JobSchema)
